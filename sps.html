@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stone Paper Scissor</title>
+    <link rel="stylesheet" href="sps.css" />
+    <link
+      rel="shortcut icon"
+      href="Screenshot 2023-12-31 033548.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="xy">
+      <h1 id="head">STONE PAPER SCISSORS</h1>
+      <h2>Let's the game begin</h2>
+    </div>
+
+    <div id="in">
+      <input type="text" id="input" placeholder="Enter your name" />
+      <button
+        id="subbut"
+        onclick="
+       username= document.querySelector('#input').value;
+       document.querySelector('#input').value=null;
+      "
+      >
+        SUBMIT
+      </button>
+    </div>
+
+    <br />
+    <br />
+
+    <div class="container">
+      <div class="ab">
+        <button
+          class="img"
+          onclick="
+            userchoice='STONE';
+             compchoice = rand();
+            document.querySelector('#user').innerHTML=`Your choice is ${userchoice}.`;
+            document.querySelector('#cmp').innerHTML=`Computer choice is ${compchoice}.`;
+            result(userchoice,compchoice);"
+        >
+          <img
+            src="https://ih1.redbubble.net/image.4451896472.4971/st,small,507x507-pad,600x600,f8f8f8.jpg"
+            alt="rock image"
+            height="300px"
+            width="300px"
+          />
+        </button>
+      </div>
+
+      <div class="ab">
+        <button
+          class="img"
+          onclick="
+            userchoice='PAPER';
+             compchoice = rand();
+            document.querySelector('#user').innerHTML=`Your choice is ${userchoice}.`;
+            document.querySelector('#cmp').innerHTML=`Computer choice is ${compchoice}.`;
+            result(userchoice,compchoice);
+            "
+        >
+          <img
+            src="https://previews.123rf.com/images/gmm2000/gmm20001705/gmm2000170500015/79219331-paper-notebook-hand-drawn-cute-line-art-illustration.jpg"
+            alt="paper"
+            height="300px"
+            width="300px"
+          />
+        </button>
+      </div>
+
+      <div class="ab">
+        <button
+          class="img"
+          onclick="
+            userchoice='SCISSORS';
+             compchoice = rand();
+            document.querySelector('#user').innerHTML=`Your choice is ${userchoice}.`;
+            document.querySelector('#cmp').innerHTML=`Computer choice is ${compchoice}.`;
+            result(userchoice,compchoice);
+            "
+        >
+          <img
+            src="https://www.kindpng.com/picc/m/212-2122628_crayon-clipart-scissors-cute-scissors-clipart-hd-png.png"
+            alt="scissor"
+            height="300px"
+            width="300px"
+          />
+        </button>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div class="cont2">
+      <div class="txtres">
+        <h2 id="final"></h2>
+        <p class="duhh" id="user"></p>
+        <p class="duhh" id="cmp"></p>
+        <p class="duhh" id="winner"></p>
+      </div>
+
+      <div class="tblres">
+        <table border="1px solid white">
+          <thead>
+            <th>Your Score</th>
+            <th>Computer Score</th>
+            <th>Tie Round</th>
+          </thead>
+          <tbody>
+            <td id="win">0</td>
+            <td id="lose">0</td>
+            <td id="tie">0</td>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="sps.js"></script>
+  </body>
+</html>
